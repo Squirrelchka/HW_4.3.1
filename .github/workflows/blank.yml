@@ -33,5 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm instal -g postman
-          newman run --global-var "API_KEY= ${{secrets.API_KEY}}
+          newman run --global-var "API_KEY= ${{secrets.API_KEY}}"
           newman run "postman/collections/Verifier/Admin Story.json" -e "Admin story.postman_environment.json"  -e "workspace.postman_globals.json"
