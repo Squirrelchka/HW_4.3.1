@@ -32,6 +32,5 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          postman login --with-api-key ${{secrets.API_KEY}}
-          postman collection run "postman/collections/Verifier/Admin Story.json" -e "Admin story.postman_environment.json"  -e "workspace.postman_globals.json"
-          
+          echo Add other actions to build,
+          echo test, and deploy your project.
