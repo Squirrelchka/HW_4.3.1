@@ -32,7 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          powershell.exe -NoProfile -InputFormat None -ExecutionPolicy AllSigned -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://dl-cli.pstmn.io/install/win64.ps1'))"
           postman login --with-api-key ${{secrets.API_KEY}}
           postman collection run "postman/collections/Verifier/Admin Story.json" -e "Admin story.postman_environment.json"  -e "workspace.postman_globals.json"
-          shell: /usr/bin//bash -e 0
+          
