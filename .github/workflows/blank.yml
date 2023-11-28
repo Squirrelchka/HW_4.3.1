@@ -33,5 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm instal -g postman
-          newman run https://dark-meadow-867185.postman.co/workspace/API-auto~b958047f-992c-4039-835f-df7088158391/collection/26429317-703478d3-e837-4d2b-8413-82ac6ab0e817?action=share&creator=26429317?apikey=${{secret.API_KEY}}
-          newman run "postman/collections/Verifier/Admin Story.jsonЭ -e "Admin story.postman_environment.json"  -e "workspace.postman_globals.json"
+          env: API_KEY: ${{secret.API_KEY}}
+          newman run "postman/collections/Verifier/Admin Story.json" -e "Admin story.postman_environment.json"  -e "workspace.postman_globals.json"
