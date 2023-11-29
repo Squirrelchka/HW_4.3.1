@@ -12,7 +12,21 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+  name: Nightly Collection Run
+  on:
+  schedule:
+    - cron: '0 0 * * *'
+    jobs:
+       nightly-collection:
+       runs-on: ubuntu-latest
+       steps:
+       - name: Checkout code
+         uses: actions/checkout@v2
+       - name: Run collection
+         run: |
+               npm instal -g postman
+               newman run "Verifier-Admin Story.postman_collection.json" -e "workspace.postman_globals.json" -e "Admin story.postman_environment.json" --global-var "API_KEY= ${{secrets.API_KEY}}"
+       
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -34,3 +48,4 @@ jobs:
         run: |
           npm instal -g postman
           newman run "Verifier-Admin Story.postman_collection.json" -e "workspace.postman_globals.json" -e "Admin story.postman_environment.json" --global-var "API_KEY= ${{secrets.API_KEY}}"
+      
