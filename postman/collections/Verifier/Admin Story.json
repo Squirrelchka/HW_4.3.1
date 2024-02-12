@@ -52,7 +52,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": null,\r\n  \"login\": \"{{$randomUserName}}\",\r\n  \"firstName\": \"Vano\",\r\n  \"lastName\": \"Vano\",\r\n  \"email\":\"{{$randomEmail}}\",\r\n  \"imageUrl\": null,\r\n  \"activated\": true,\r\n  \"langKey\": \"en\",\r\n  \"createdBy\": \"anonymousUser\",\r\n  \"createdDate\": null,\r\n  \"lastModifiedBy\": \"gromova_admin\",\r\n  \"lastModifiedDate\": null,\r\n  \"authorities\": [\r\n    \"ROLE_USER_STUDENT\"\r\n  ]\r\n}\r\n",
+					"raw": "{\r\n  \"id\": null,\r\n  \"login\": \"{{$randomUserName}}\",\r\n  \"firstName\": \"Vano\",\r\n  \"lastName\": \"Vano\",\r\n  \"email\":\"{{$randomEmail}}\",\r\n  \"imageUrl\": null, \r\n  \"activated\": true,\r\n  \"langKey\": \"en\",\r\n  \"createdBy\": \"anonymousUser\",\r\n  \"createdDate\": null,\r\n  \"lastModifiedBy\": \"gromova_admin\",\r\n  \"lastModifiedDate\": null,\r\n  \"authorities\": [\r\n    \"ROLE_USER_STUDENT\"\r\n  ]\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
